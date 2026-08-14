@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
 
-  has_one_attached :plofile_image
+  has_one_attached :profile_image
 
   def get_profile_image(width, height)
     unless profile_image.attached?
