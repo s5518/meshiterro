@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_08_16_001619) do
+ActiveRecord::Schema[8.1].define(version: 2026_09_07_111023) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
@@ -55,8 +55,11 @@ ActiveRecord::Schema[8.1].define(version: 2026_08_16_001619) do
   end
 
   create_table "post_images", force: :cascade do |t|
+    t.string "address", default: "", null: false
     t.text "caption"
     t.datetime "created_at", null: false
+    t.float "latitude", default: 0.0, null: false
+    t.float "longitude", default: 0.0, null: false
     t.string "shop_name"
     t.datetime "updated_at", null: false
     t.integer "user_id"

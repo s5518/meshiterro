@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resource :favorite, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
   end
+  resource :map, only: [:show]
 
   root to: "homes#top"
   get 'homes/about' => 'homes#about', as: 'about'
